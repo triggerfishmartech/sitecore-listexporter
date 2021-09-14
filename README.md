@@ -1,7 +1,11 @@
 ﻿# sitecore-campaignlistexporter
 ![Trigerfish Logo](https://avatars.githubusercontent.com/u/78132139?v=4)
 
-Allows you to export the last known campaign ID of a contact in a list.
+## What is it?
+This is a Sitecore List Manager extension module that allows you to export the last known campaign name of a contact in a list.
+
+## Why?
+Our use-case was when a user unsubscribes from all EXM campaigns, we wanted to know the last one they received before unsubscribing.
 
 ## Compatibility
 - (Tested on) Sitecore 10
@@ -12,7 +16,6 @@ Allows you to export the last known campaign ID of a contact in a list.
 - Custom Facets for sc Contacts
 
 ## Usage Note
-The source code provides an example code on how to export the last known campaign ID of a contact in ListManager export.
 Copy the Feature/code to your working sitecore repo Helix structure please refer to the File structure below on details.
 You need a proper working Sitecore 10 instance along with xConnect in order to test this E2E which is beyond the scope of this repo.
 
@@ -31,10 +34,10 @@ Feature/
 
 ### sitecore-campaignlistexporter
 - Sitecore ListManagement xConnect Web Export provides a way to export the Facet fields to the CSV.
-- The code here leverages this feature by adding a patch to App_Config/Sitecore/ListManagement/Sitecore.ListManagement.config  
+- The code here extends this feature by adding a patch to App_Config/Sitecore/ListManagement/Sitecore.ListManagement.config  
 to export the custom fields to the CSV.
-- The patch file consists of a class implementing IContactDataReader which defines the functionality to retrieve the campaign Id 
-from the contact interactions & a field name which renders to column name on the exported CSV file.
+- The patch file consists of a class implementing IContactDataReader which defines the functionality to export the last 
+known campaign name from the contact interactions in a list & a field name which renders to column name on the exported CSV file.
 
 ### CSV example
 ![Screenshot](https://i.postimg.cc/52BHVQFZ/xls.png)
@@ -48,6 +51,6 @@ from the contact interactions & a field name which renders to column name on the
 - Sitecore.ListManagement.XConnect
 - Sitecore.ListManagement.XConnect.Web
 
-##Good reference here on Listmanager fields export
+## Good reference here on Listmanager fields export
 ![Link](https://sitecorify.com/list-manager-export-contacts-with-custom-facets/)
 
