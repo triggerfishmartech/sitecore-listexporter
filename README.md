@@ -1,21 +1,20 @@
 ﻿# sitecore-campaignlistexporter
-Allows you to export the last known campaign ID of a contact in a list.
-
 ![Trigerfish Logo](https://avatars.githubusercontent.com/u/78132139?v=4)
 
+Allows you to export the last known campaign ID of a contact in a list.
+
 ## Compatibility
-- Tested in Sitecore 10
+- (Tested on) Sitecore 10
 
 ## Prerequisites
 - Working sc 10 instance
 - xConnect service
 - Custom Facets for sc Contacts
 
-##Usage
-### Note
+## Usage Note
 The source code provides an example code on how to export the last known campaign ID of a contact in ListManager export.
-Copy the Feature/code to your working sitecore repo if you are following Helix structure (please refer to the File structure below on details)
-you need a proper working Sitecore 10 instance along with xConnect in order to test this E2E which is beyond the scope of this repo.
+Copy the Feature/code to your working sitecore repo Helix structure please refer to the File structure below on details.
+You need a proper working Sitecore 10 instance along with xConnect in order to test this E2E which is beyond the scope of this repo.
 
 ### File Structure
 ``` bash
@@ -31,13 +30,14 @@ Feature/
 ```
 
 ### sitecore-campaignlistexporter
-- Sitecore ListManagement API provides a way to export the custom fields to the List Manager export contacts to CSV feature.
-- The code here makes use of the Sitecore ListManagement API in order to export the custom fields to the CSV using List Manager export contacts to CSV feature.
-- The patch file consists of a class implementeing IContactDataReader which grabs the campaign Id from the contact 
-& a field name which is column name on the export CSV.
+- Sitecore ListManagement xConnect Web Export provides a way to export the Facet fields to the CSV.
+- The code here leverages this feature by adding a patch to App_Config/Sitecore/ListManagement/Sitecore.ListManagement.config  
+to export the custom fields to the CSV.
+- The patch file consists of a class implementing IContactDataReader which defines the functionality to retrieve the campaign Id 
+from the contact interactions & a field name which renders to column name on the exported CSV file.
 
 ### CSV example
-[xls.png](https://postimg.cc/MMYPtcR2)
+![Screenshot](https://i.postimg.cc/52BHVQFZ/xls.png)
 
 ## Dependenent packages sc 10.0.0
 - Sitecore.Kernel
