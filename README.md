@@ -49,6 +49,6 @@ known campaign name from the contact interactions in a list & a field name which
 - Sitecore.ListManagement.XConnect
 - Sitecore.ListManagement.XConnect.Web
 
-## Good reference here on Listmanager fields export
-![Link](https://sitecorify.com/list-manager-export-contacts-with-custom-facets/)
+## References on Listmanager fields export
+* https://sitecorify.com/list-manager-export-contacts-with-custom-facets
 
