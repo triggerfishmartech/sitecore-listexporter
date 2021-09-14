@@ -26,8 +26,6 @@ Feature/
 └── code/
     └── ContactDataReaders
         ├── CampaignContactDataReader.cs  //class implementing IContactDataReader
-    └── xConnectModels
-        ├── ContactCustomFieldsFacet.cs   //custom Facet class for example
     └── App_config
         ├── Feature.ListManager.config    // Patch for OOTB App_Config/Sitecore/ListManagement/Sitecore.ListManagement.config
 ```

@@ -7,13 +7,12 @@ using Sitecore.ListManagement.XConnect.Web.Export;
 using Sitecore.XConnect;
 using Sitecore.XConnect.Client;
 using Sitecore.XConnect.Client.Configuration;
-using Feature.Listmanager.xConnectModels;
 
 namespace Feature.Listmanager.ContactDataReaders
 {
     public class CampaignContactDataReader : IContactDataReader
     {
-        public string FacetName => ContactCustomFieldsFacet.DefaultFacetKey;
+        public string FacetName => "Personal";
 
         /// <summary></summary>
         public string Map(Contact contact)

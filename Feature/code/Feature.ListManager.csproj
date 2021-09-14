@@ -100,7 +100,6 @@
   <ItemGroup>
     <Compile Include="ContactDataReaders\CampaignContactDataReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="xConnectModels\ContactCustomFieldsFacet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
